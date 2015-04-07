@@ -1,0 +1,49 @@
+# Statusbar
+hardstatus alwayslastline "%{= KW} Screen(s): %-w%{= wk} %50>%n %t%{-}%+w%< %=%{KW}[%c %M %d %Y ]"
+
+# Turn off start message:
+startup_message off
+
+# Set messages timeout to one second:
+msgwait 1
+
+# Shell path can be needed on some systems
+#shell /usr/local/bin/bash
+
+# Use a 30000-line scrollback buffer
+defscrollback 30000
+
+# Activity flash bar
+activity "activity in %n (%t) [%w:%s]~"
+
+# Run everything in UTF-8.
+defutf8 on
+
+defnonblock on
+autodetach on
+  
+# Use the function keys to switch among windows.
+#bindkey -k k1 select 1
+#bindkey -k k2 select 2
+#bindkey -k k3 select 3
+#bindkey -k k4 select 4
+#bindkey -k k5 select 5
+#bindkey -k k6 select 6
+#bindkey -k k7 select 7
+#bindkey -k k8 select 8
+#bindkey -k k9 select 9
+#bindkey -k k; select 10
+#bindkey -k F1 select 11
+#bindkey -k F2 select 12
+
+#bindkey -k F1 prev
+#bindkey -k F2 next
+
+#default binding key - 'Ctrl-e'
+escape ^Ee
+
+# Window numbering starts at 1, not 0.
+bind c screen 1
+bind ^c screen 1
+bind 0 select 10
+screen 1
